@@ -53,14 +53,14 @@ class PrayerTimesWidget : AppWidgetProvider() {
         val asr = prefs.getString(Constants.PREF_ASR, "N/A")
         val maghrib = prefs.getString(Constants.PREF_MAGHRIB, "N/A")
         val isha = prefs.getString(Constants.PREF_ISHA, "N/A")
-        val lastUpdated = prefs.getLong(Constants.PREF_LAST_UPDATED, 0L)
+        // val lastUpdated = prefs.getLong(Constants.PREF_LAST_UPDATED, 0L) // Removed unused variable
 
-        val sdf = SimpleDateFormat("HH:mm", Locale.getDefault())
-        val lastUpdatedTime = if (lastUpdated > 0) {
-            sdf.format(Date(lastUpdated))
-        } else {
-            "N/A"
-        }
+        // val sdf = SimpleDateFormat("HH:mm", Locale.getDefault()) // Removed unused variable
+        // val lastUpdatedTime = if (lastUpdated > 0) { // Removed unused block
+        //     sdf.format(Date(lastUpdated))
+        // } else {
+        //     "N/A"
+        // }
 
         views.setTextViewText(R.id.appwidget_fajr_time, fajr)
         views.setTextViewText(R.id.appwidget_sunrise_time, sunrise)
@@ -68,7 +68,7 @@ class PrayerTimesWidget : AppWidgetProvider() {
         views.setTextViewText(R.id.appwidget_asr_time, asr)
         views.setTextViewText(R.id.appwidget_maghrib_time, maghrib)
         views.setTextViewText(R.id.appwidget_isha_time, isha)
-        views.setTextViewText(R.id.appwidget_last_updated, context.getString(R.string.last_updated, lastUpdatedTime))
+        // views.setTextViewText(R.id.appwidget_last_updated, context.getString(R.string.last_updated, lastUpdatedTime)) // Removed line that updates last updated
 
         // Set up a refresh button click listener
         val refreshIntent = Intent(context, PrayerTimesService::class.java)

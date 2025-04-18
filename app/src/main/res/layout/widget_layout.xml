@@ -45,14 +45,3 @@
         <TextView android:id="@+id/time_isha" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
             android:text="20:08" android:textColor="@android:color/white" android:textAlignment="center"/>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/last_updated"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="12sp"
-        android:textColor="@android:color/white"
-        android:text="Last Updated: --:--" />
-
-</LinearLayout>
